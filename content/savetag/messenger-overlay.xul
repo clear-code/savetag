@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://emlexporter/locale/emlexporter.dtd">
+<overlay id="emlOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript;version=1.7" src="./Util.js" />
+  <script type="application/x-javascript;version=1.7" src="./jsdeferred.js" />
+  <script type="application/x-javascript;version=1.7" src="./EMLExporter.js" />
+  <script type="application/x-javascript;version=1.7" src="./messenger-overlay.js" />
+
+<popup id="mailContext">
+  <menuitem id="save-message-with-tag"
+            label="メッセージをサーバに保存"
+            oncommand="saveMessageWithTag();"/>
+</popup>
+
+</overlay>

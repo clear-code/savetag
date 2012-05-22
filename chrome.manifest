@@ -1,0 +1,7 @@
+content	savetag	content/savetag/
+
+locale	savetag	ja	locale/ja/savetag/
+
+overlay	chrome://messenger/content/messenger.xul	chrome://savetag/content/messenger-overlay.xul
+
+resource savetag-modules modules/
