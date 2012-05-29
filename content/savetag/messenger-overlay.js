@@ -15,7 +15,7 @@ window.addEventListener("load", function () {
         var selectedMessages = gFolderDisplay.selectedMessages;
         emlExporter.saveMessagesAsEMLDeferred(selectedMessages, destination)
           .next(function () {
-            alert("エクスポートが終了しました");
+            // alert("エクスポートが終了しました");
           }).error(function (x) {
             alert("EML Export Error: " + x);
           });
