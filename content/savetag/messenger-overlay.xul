@@ -12,6 +12,9 @@
   <menuitem id="save-message-with-tag"
             label="メッセージをサーバに保存"
             oncommand="saveMessageTag.saveSelectedMessage();"/>
+  <!-- <menuitem id="save-message-with-tag-list-tags" -->
+  <!--           label="タグ一覧を確認" -->
+  <!--           oncommand="saveMessageTag.displayTagList();"/> -->
 </popup>
 
 </overlay>
