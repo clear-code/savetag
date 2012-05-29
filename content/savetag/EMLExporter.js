@@ -25,8 +25,8 @@ ProgressManager.prototype = {
   },
 
   countUp: function () {
-    this.currentTaskNumber++;
-    this.onCountChange();
+    // this.currentTaskNumber++;
+    // this.onCountChange();
   },
 
   resetTaskCount: function (totalTaskCount) {
@@ -113,7 +113,7 @@ EMLExporter.prototype = {
   },
 
   onTaskCountChange: function () {
-    this.updateNotification();
+    // this.updateNotification();
   },
 
   get folderExportingProgress() {

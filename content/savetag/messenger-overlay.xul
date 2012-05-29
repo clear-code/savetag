@@ -11,7 +11,7 @@
 <popup id="mailContext">
   <menuitem id="save-message-with-tag"
             label="メッセージをサーバに保存"
-            oncommand="saveMessageWithTag();"/>
+            oncommand="saveMessageTag.saveSelectedMessage();"/>
 </popup>
 
 </overlay>
