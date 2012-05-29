@@ -1,4 +1,0 @@
-<!ENTITY folder.menu.exportEML "emlファイル出力">
-<!ENTITY folder.submenu.export "選択フォルダのみ出力">
-<!ENTITY folder.submenu.exportRecursively "サブフォルダも含めて出力">
-<!ENTITY statusbar.button.cancel "キャンセル">
