@@ -3,7 +3,7 @@
          xmlns:em="http://www.mozilla.org/2004/em-rdf#"
          xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
-                   em:id="savetag@clear-code.inc"
+                   em:id="savetag@clear-code.com"
                    em:name="SaveEMLWithTag"
                    em:version="1.0"
                    em:description="EML Tag."
