@@ -49,7 +49,7 @@ function EMLExporter(global, elements) {
   this.global = global;
   this.strbundle = Cc["@mozilla.org/intl/stringbundle;1"]
                     .getService(Ci.nsIStringBundleService)
-                    .createBundle("chrome://emlexporter/locale/emlexporter.properties");
+                    .createBundle("chrome://savetag/locale/savetag.properties");
   this.cancelButton = elements.cancelButton;
 }
 
