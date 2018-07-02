@@ -554,7 +554,7 @@ EMLExporter.prototype = {
       messageDirectory = Util.getUniqueFile(destination, self.getMessageFolderName(targetMessageFolder), {
         isDirectory: true
       });
-      messageDirectory.create(1, parseInt("0775", 8));
+      messageDirectory.create(1, 0o775);
       return messages;
     }).next(function (messages) {
       exportMessagesProcess = self.saveMessagesAsEMLDeferred(messages, messageDirectory);
@@ -720,7 +720,7 @@ EMLExporter.prototype = {
     var escapedMessageText = this.escapeFromInMessage(messageText);
 
     var messageFile = Util.getUniqueFile(destination, this.getFileNameForMessage(message, subject));
-    messageFile.createUnique(0, 0644);
+    messageFile.createUnique(0, 0o644);
 
     this.writeMessageFile(messageFile, escapedMessageText); // TODO: check encoding
   },
