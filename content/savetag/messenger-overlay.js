@@ -5,7 +5,7 @@ window.addEventListener("load", function () {
         .getService(Ci.nsIPrefBranch);
 
   var destination = prefs.getComplexValue("mboximport.export.server_path",
-                                          Ci.nsILocalFile);
+                                          Ci.nsIFile);
   var tagKey = prefs.getCharPref("mboximport.export.tagkey");
 
   window.saveMessageTag = {

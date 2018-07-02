@@ -19,7 +19,7 @@ var Util = {
   },
 
   openFile: function (aPath) {
-    let file = Cc["@mozilla.org/file/local;1"].createInstance(Ci.nsILocalFile);
+    let file = Cc["@mozilla.org/file/local;1"].createInstance(Ci.nsIFile);
     file.initWithPath(aPath);
 
     return file;
@@ -95,7 +95,7 @@ var Util = {
     var dirService = Cc['@mozilla.org/file/directory_service;1']
       .getService(Ci.nsIProperties);
 
-    return dirService.get(aProp, Ci.nsILocalFile);
+    return dirService.get(aProp, Ci.nsIFile);
   },
 
   copyDirectoryAs: function (source, dest) {
