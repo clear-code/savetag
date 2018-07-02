@@ -384,7 +384,13 @@ var Util = {
       let pt = typeof prm;
 
       if (prm && pt === "object")
-        prm = [k + "=" + v for ([k, v] in Iterator(prm))].join("&");
+        prm = (() => {
+          const params = [];
+          for (const [k, v] of Object.entries(prm)) {
+            params.push(k + "=" + v);
+          }
+          return params;
+        })().join("&");
       else if (pt !== "string")
         prm = "";
 
