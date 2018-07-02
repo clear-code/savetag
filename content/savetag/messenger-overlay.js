@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
   var emlExporter = new EMLExporter(window);
 
-  var prefs = Cc['@mozilla.org/preferences;1']
+  var prefs = Cc['@mozilla.org/preferences-service;1']
         .getService(Ci.nsIPrefBranch);
 
   var destination = prefs.getComplexValue("mboximport.export.server_path",
