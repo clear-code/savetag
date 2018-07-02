@@ -1,5 +1,5 @@
 // Usage:: Components.utils.import('..../jsdeferred.jscodemodule.js');
-// JSDeferred 0.4.0 Copyright (c) 2007 cho45 ( www.lowreal.net )
+// JSDeferred 0.4.0+ Copyright (c) 2007 cho45 ( www.lowreal.net )
 // See http://github.com/cho45/jsdeferred
 var EXPORTED_SYMBOLS = ["Deferred"];
 
@@ -402,7 +402,7 @@ Deferred.newChromeWorker = function (script) {
 	worker.onmessage = function (event) {
 		var message = event.data;
 		if (message.init) {
-			for each (let queued in queuedMessage) {
+			for (let queued of queuedMessage) {
 				manager.postMessage(queued);
 			}
 			queuedMessages = null;
@@ -462,6 +462,7 @@ Deferred.newChromeWorker = function (script) {
 	return ret;
 };
 
+/*
 var messageManagers = {};
 Deferred.postie_for_message_manager = function (manager) {
 	var ret = {
@@ -479,7 +480,7 @@ Deferred.postie_for_message_manager = function (manager) {
 	var messageListener = function (message) {
 			message = message.json;
 			if (message.init) {
-				for each (let queued in queuedMessage) {
+				for (let queued of queuedMessage) {
 					manager.sendAsyncMessage(postieId+':request', queued);
 				}
 				queuedMessages = null;
@@ -574,6 +575,7 @@ Deferred.postie = function (target) {
 };
 
 Deferred.methods.push('postie');
+*/
 
 function destroy() {
 	timers.forEach(function(aTimer) {
